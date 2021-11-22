@@ -79,7 +79,7 @@
                 href="/"
                 on:click|preventDefault={() =>
                   dispatch("currentquest", (no = i))}
-                ><p style="height: 20px;overflow:hidden">
+                ><p class="sidebarquest">
                   {JSON.parse(data.content_text).question}
                 </p></a
               >
@@ -95,7 +95,7 @@
                   href="/"
                   on:click|preventDefault={() =>
                     dispatch("currentquest", (no = 0))}
-                  ><p style="height: 20px;overflow:hidden">
+                  ><p class="sidebarquest">
                     {JSON.parse(data.content_text).question}
                   </p></a
                 >
@@ -112,7 +112,7 @@
                   href="/"
                   on:click|preventDefault={() =>
                     dispatch("currentquest", (no = datas))}
-                  ><p style="height: 20px;overflow:hidden">
+                  ><p class="sidebarquest">
                     {JSON.parse(data.content_text).question}
                   </p></a
                 >
@@ -170,6 +170,10 @@
   }
   .all a {
     text-align: left;
+  }
+
+  .sidebarquest{
+    height:25px;overflow:hidden
   }
 
   .active {
