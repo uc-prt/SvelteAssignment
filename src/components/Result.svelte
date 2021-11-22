@@ -100,27 +100,22 @@
           >
         </td>
         <td class="ansArea">
-          {#each dupli as ansindex}
-            {#if i == ansindex}
-              {#each JSON.parse(data.content_text).answers as ansno, index (ansno)}
-                {#if ansno.is_correct === "1"}
-                  {#if answ[ansindex] == index}
-                    <span class="activeans">{index + 1}</span>
-                  {/if}
-                  {#if answ[ansindex] != index}
-                    <span class="disactiveans">{index + 1}</span>
-                  {/if}
-                {/if}
-                {#if ansno.is_correct === "0"}
-                  {#if answ[ansindex] == index}
-                    <span class="actives">{index + 1}</span>
-                  {/if}
-                  {#if answ[ansindex] != index}
-                    <span class="disactiveans">{index + 1}</span>
-                  {/if}
-                {/if}
+          {#each JSON.parse(data.content_text).answers as ansno, index (ansno)}
+          {#if ansno.is_correct === "1"}
+            <span class="activeans">{index + 1}</span>
+          {/if}
+              {#if ansno.is_correct === "0"}
+              {#each dupli as ansindex}
+              {#if i === ansindex}
+              {#if answ[ansindex] == index}
+                <span class="actives">{index + 1}</span>
+              {/if}
+              {#if answ[ansindex] != index}
+                <span class="disactiveans">{index + 1}</span>
+              {/if}
+              {/if}
               {/each}
-            {/if}
+              {/if}
           {/each}
         </td>
       </tr>
