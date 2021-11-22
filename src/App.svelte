@@ -171,7 +171,7 @@
     display: block;
   }
   .startbutton {
-    margin: 10em 41em;
+    margin: 10em auto;
   }
   .startbtn {
     cursor: pointer;
@@ -181,7 +181,4 @@
     font-weight: bold;
     padding: 0.5rem 2rem;
   }
-  /* #anschecker {
-    margin-left: 0.5em;
-  } */
 </style>
