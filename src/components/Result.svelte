@@ -101,14 +101,12 @@
         </td>
         <td class="ansArea">
           {#each JSON.parse(data.content_text).answers as ansno, index (ansno)}
-          {#if ansno.is_correct === "1"}
-            <span class="activeans">{index + 1}</span>
-          {/if}
-              
-              {#if answ[ansindex] != index}
-                <span class="disactiveans">{index + 1}</span>
-              {/if}
-              
+            {#if ansno.is_correct === "1"}
+              <span class="activeans">{index + 1}</span>
+            {/if}
+            {#if ansno.is_correct === "0"}
+              <span class="disactiveans">{index + 1}</span>
+            {/if}
           {/each}
         </td>
       </tr>
