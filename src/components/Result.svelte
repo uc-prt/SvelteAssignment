@@ -104,18 +104,11 @@
           {#if ansno.is_correct === "1"}
             <span class="activeans">{index + 1}</span>
           {/if}
-              {#if ansno.is_correct === "0"}
-              {#each dupli as ansindex}
-              {#if i === ansindex}
-              {#if answ[ansindex] == index}
-                <span class="actives">{index + 1}</span>
-              {/if}
+              
               {#if answ[ansindex] != index}
                 <span class="disactiveans">{index + 1}</span>
               {/if}
-              {/if}
-              {/each}
-              {/if}
+              
           {/each}
         </td>
       </tr>
